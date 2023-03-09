@@ -7,9 +7,17 @@ from django.shortcuts import render
 def index(request):
     """Возвращает отображение главной страницы"""
     template = 'posts/index.html'
-    return render(request, template)
+    posts = 'Это главная страница проекта Yatube'
+    context = {
+        'posts': posts,
+    }
+    return render(request, template, context)
 
 
 def group_posts(request, slug):
     """Возвращает отображение постов в группах"""
-    return HttpResponse(f'Post {slug}')
+    posts = 'Здесь будет информация о группах проекта Yatube'
+    context = {
+        posts: 'posts'
+    }
+    return HttpResponse(request, context)
