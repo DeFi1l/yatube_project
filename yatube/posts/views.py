@@ -14,7 +14,7 @@ def index(request):
     return render(request, template, context)
 
 
-def group_posts(request, slug):
+def group_posts(request):
     """Возвращает отображение постов в группах"""
     posts = 'Здесь будет информация о группах проекта Yatube'
     context = {
