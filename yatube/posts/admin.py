@@ -9,5 +9,7 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ('pub_date',)
     empty_value_display = '-пусто-'
 # Register your models here.
+
+
 admin.site.register(Post, PostAdmin)
 admin.site.register(Group)

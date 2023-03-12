@@ -18,7 +18,7 @@ def index(request):
 
 def group_posts(request, slug):
     """Возвращает отображение постов в группах"""
-    group = get_object_or_404(Group, slug = slug)
+    group = get_object_or_404(Group, slug=slug)
     template = 'posts/group_list.html'
     title = f'Записи сообщества {group}'
     posts = Post.objects.filter(group=group).order_by('-pub_date')[:10]
